@@ -1,6 +1,6 @@
 {
   "name": "exploration-create-own-npm-package",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "just dummy package to exploration purpose, created by Id More Academy",
   "main": "index.js",
   "scripts": {
