@@ -8,7 +8,7 @@ on:
       - master
 
 jobs:
-  test:
+  testing:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -18,7 +18,7 @@ jobs:
       - run: npm install --registry https://registry.npmjs.org && npm test
 
   publish-npm:
-    needs: build
+    needs: testing
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -31,7 +31,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
   publish-gpr:
-    needs: build
+    needs: testing
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
